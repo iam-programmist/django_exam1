@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Exchange Rate</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Home</a>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы валют</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Курсы валют</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Валюта</th>
+                    <th>Курс покупки</th>
+                    <th>Курс продажи</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="currency">USD (Доллар США)</td>
+                    <td>100.50</td>
+                    <td>101.00</td>
+                </tr>
+                <tr>
+                    <td class="currency">EUR (Евро)</td>
+                    <td>115.75</td>
+                    <td>116.25</td>
+                </tr>
+                <tr>
+                    <td class="currency">GBP (Фунт стерлингов)</td>
+                    <td>130.30</td>
+                    <td>131.00</td>
+                </tr>
+                <tr>
+                    <td class="currency">RUB (Российский рубль)</td>
+                    <td>1.35</td>
+                    <td>1.40</td>
+                </tr>
+                <tr>
+                    <td class="currency">JPY (Японская иена)</td>
+                    <td>0.90</td>
+                    <td>0.95</td>
+                </tr>
+                <tr>
+                    <td class="currency">CNY (Китайский юань)</td>
+                    <td>15.10</td>
+                    <td>15.30</td>
+                </tr>
+                <tr>
+                    <td class="currency">CHF (Швейцарский франк)</td>
+                    <td>108.45</td>
+                    <td>109.00</td>
+                </tr>
+                <tr>
+                    <td class="currency">TRY (Турецкая лира)</td>
+                    <td>11.55</td>
+                    <td>11.85</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Данные обновляются каждый час</p>
+    </footer>
+</body>
+</html>
