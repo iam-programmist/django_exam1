@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список валют</title>
+    <link rel="stylesheet" href="{% static 'css/test1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Список валют</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Код валюты</th>
+                    <th>Название валюты</th>
+                    <th>Символ</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for currency in currencies %}
+                <tr>
+                    <td>{{ currency.currency_code }}</td>
+                    <td>{{ currency.currency_name }}</td>
+                    <td>{{ currency.symbol }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

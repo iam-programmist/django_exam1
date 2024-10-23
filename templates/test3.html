@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История курсов обмена</title>
+    <link rel="stylesheet" href="{% static 'css/test1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>История курсов обмена</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Базовая валюта</th>
+                    <th>Целевая валюта</th>
+                    <th>Старый курс</th>
+                    <th>Новый курс</th>
+                    <th>Дата изменения</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rate in historical_rates %}
+                <tr>
+                    <td>{{ rate.base_currency.currency_name }}</td>
+                    <td>{{ rate.target_currency.currency_name }}</td>
+                    <td>{{ rate.old_rate }}</td>
+                    <td>{{ rate.new_rate }}</td>
+                    <td>{{ rate.change_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
